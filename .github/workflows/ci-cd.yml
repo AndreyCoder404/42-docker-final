@@ -30,7 +30,6 @@ jobs:
         run: go test ./...
 
   publish:
-    needs: test
     if: github.event_name == 'release' && github.event.action == 'published'
     runs-on: ubuntu-latest
     steps:
